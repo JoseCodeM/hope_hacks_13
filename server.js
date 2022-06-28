@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
 const port = 5000
-
-// Static Files
-app.use(express.static('public'));
-app.use('/css', express.static(__dirname + 'public/css'))
-app.use('/js', express.static(__dirname + 'public/js'))
+const path = require('path');
+// // Static Files
+// app.use(express.static('public'));
+// app.use('/css', express.static(__dirname + 'public/css'))
+// app.use('/js', express.static(__dirname + 'public/js'))
 
 // Static Files
 app.use(express.static('public'));
@@ -20,13 +20,26 @@ app.set('view engine', 'ejs');
 
 
 // Navigation
-app.get('', (req, res) => {
-    res.render('index', { text: 'Hey' })
+app.get('/', (req, res) => {
+    res.render('index')
 })
 
-app.get('/about', (req, res) => {
-   res.sendFile(__dirname + '/views/about.html')
+app.get('/map', (req, res) => {
+    res.render('map')
 })
+
+app.get('/contact', (req, res) => {
+    res.render('contact',)
+})
+
+app.get('/quiz', (req, res) => {
+    res.render('quiz')
+})
+
+
+
+
+
 
 // Example for other folders
 app.listen(port, () => console.info(`App listening on port ${port}`))
