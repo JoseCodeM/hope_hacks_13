@@ -80,6 +80,9 @@ nav {
     text-align: right;
   }
 
+  .nav-display-none {
+    display: none;
+  }
   .header-wrapper {
     flex-direction: column;
   }

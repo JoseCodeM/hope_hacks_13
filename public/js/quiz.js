@@ -27,7 +27,7 @@ let quizValue = [0, 0, 0, 0];
 // Navbar Mobile Responsive Event Listener
 // ================================================================= //
 NavbarHamburgerToggle.addEventListener('click', () => {
-    Navbar.classList.toggle('display-none')
+    Navbar.classList.toggle('nav-display-none')
 
 });
 
