@@ -12,7 +12,7 @@
         <nav>
             <ul class="nav-list">
                 <li class="nav-item">
-                    <img src="/img/logo.png" alt="logo" width="400px" height="72px">
+                    <img src="/img/logo.svg" alt="logo" width="400px" height="72px">
                 </li>
                 <li class="nav-item">
                     <a href="">Home</a>
@@ -42,18 +42,26 @@
       </div>
     
     <!-- <img src="img/home-hero-bg.webp" alt="background" width="100%" height="100%"> -->
-      <div class="About">
-          <div>
-            <img src="img/home-person.webp" width="327.5" height="394.78">
-            <h3>View our map to find the nearest therapist!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ex nulla ullam
+     
+        <div class="grid-container">
+            <div class="grid-itemA">
+                 <img src="img/home-person.webp" width="327.5" height="394.78">
+            </div>
+            <div class="grid-itemB">
+                <h3>View our map to find the nearest therapist!</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ex nulla ullam
                 minus tempora, ipsam esse, ad nostrum aperiam quos cum error. Rem minus numquam
                 nemo autem aperiam, corporis temporibus.</p>
-            <button>View Maps</button>
+                <button>View Maps</button>
+            </div>
         </div>
-      </div>
 
 
+        <form action="/quotes" method="POST">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="quote" name="quote">
+            <button type="submit">Submit</button>
+        </form>
     
     <script src="js/index.js"> </script>
 </body>

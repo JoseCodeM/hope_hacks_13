@@ -125,9 +125,9 @@ function valueChosen(index, elementId) {
     }
 }
 
-quizSubmit.addEventListener('submit', (e) => {
-    console.log('Hello')
-})
+// quizSubmit.addEventListener('submit', (e) => {
+//     console.log('Hello')
+// })
 
 
 
