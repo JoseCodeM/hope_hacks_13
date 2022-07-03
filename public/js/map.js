@@ -2,6 +2,21 @@
 
 'use strict';
 
+// Navbar DOM Elements  //
+// ================================================================= //
+const Navbar = document.getElementById('nav');
+const NavbarHamburgerToggle = document.getElementById('hamburger-toggle');
+const NavbarMobile = window.matchMedia("(max-width: 800px)");
+const NavbarDisplayClass = Navbar.classList.contains('display-none');
+
+// Navbar Mobile Responsive Event Listener
+// ================================================================= //
+NavbarHamburgerToggle.addEventListener('click', () => {
+  Navbar.classList.toggle('nav-display-none')
+
+});
+
+
 /** Helper function to generate a Google Maps directions URL */
 function generateDirectionsURL(origin, destination) {
   const googleMapsUrlBase = 'https://www.google.com/maps/dir/?';

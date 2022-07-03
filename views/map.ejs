@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
+    <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <!-- <link href="locatorplus.css" rel="stylesheet">
@@ -57,32 +59,46 @@
     
 </head>
 <body>
-    <header>
-        <nav>
+  <header>
+    <div class="header-wrapper">
+        <div class="header-img">
+            <img src="img/logo.svg" alt="logo" style="width:20%;">
+            <div class="nav-list-toggle" id="hamburger-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <nav class="nav-placeholder nav-display-none" id="nav">
             <ul class="nav-list">
-                <li class="nav-item">
+
+                <li class="nav-list-item ">
                     <a href="/">
-                    <img src="/img/logo.svg" alt="logo" width="400px" height="72px">
+                        Home
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/">Home</a>
+                <li class="nav-list-item">
+                    <a href="/quiz">
+                        Care Assessment
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/quiz">Quiz</a>
+                <li class="nav-list-item">
+                    <a href="/map">
+                        Treatment Options
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/map">Treatment Options</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact">Contact Us</a>
+                <li class="nav-list-item">
+                    <a href="/contact">
+                        Contact
+                    </a>
                 </li>
             </ul>
         </nav>
-    </header>
+
+    </div>
+</header>
     <main class="map">
         <h1>Treatment Options</h1>
-        <p>tranquil offers treatment options via <br> Virtual Consultation and Physical Consultation for select locations.</p>
+        <p>tranquil offers treatment options via <br> Virtual and Physical Consultations for select regions.</p>
     </main>
     <!-- <section class="main-para">
         short page intro
@@ -97,7 +113,7 @@
     <article>
       <section class="resource-section mid1">
         <h3>Anxiety & Depression</h3>
-        <p>Not feeling like yourseulf? It could be anxiety or depression.</p>
+        <p>Not feeling like yourself? It could be anxiety or depression.</p>
         <a href="/views/contact.ejs">Start an Online Consultation</a>
       </section>
       <section class="resource-section mid2">
@@ -156,6 +172,65 @@
             </div>
             <div id="gmp-map"></div>
           </div>
+          
+          
+          
+          <footer>
+            <div class="footer-wrapper">
+                <div class="footer-top">
+                    <div class="header-img">
+                      <img class="footer-img" src="img/logo.svg" alt="logo" style="width:20%;">
+                    </div>
+                </div>
+    
+                <div class="footer-bottom">
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/quiz">
+                                Care Assessment
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/map">
+                               Treatment Options
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/quiz">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/map">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/contact">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
          
  
    
