@@ -70,4 +70,4 @@ app.post('/getResults', (req, res) => {
 
 
 // Example for other folders
-app.listen(port, () => console.info(`App listening on port ${port}`))
+app.listen(5000, () => console.info(`App listening on port ${port}`))
