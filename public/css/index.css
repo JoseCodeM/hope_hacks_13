@@ -46,8 +46,7 @@ align-items: center;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #3A3B7B;
-    /* margin: 10px; */
-}
+
 
 h1 {
     font-size: 74px;
@@ -63,28 +62,4 @@ background: #3A3B7B;
 border: 1px solid #67B8DE;
 border-radius: 5px;
 color: #ffffff;
-margin: 10px;
-}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-}
-
-.grid-itemB {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-
-}
-/* Media Queries */
-
- /* Small devices (portrait tablets and large phones, 600px and up) */
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
-
-} */
