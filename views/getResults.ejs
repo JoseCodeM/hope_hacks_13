@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-img">
+                <img src="img/logo.png" alt="background">
+                <div class="nav-list-toggle" id="hamburger-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <nav class="nav-placeholder nav-display-none" id="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-list-item ">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/quiz">
+                            Quiz
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/map">
+                            Map
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <h1> <%= outputTitle %> </h1>
+        <p> <%= outputDesc %> </p>
+    </main>
+
+    <!-- Results Page with CTA's -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-top">
+                <div class="header-img">
+                    <img src="img/logo.png" alt="background">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            Quiz
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            Map
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="js/quiz.js"> </script> -->
+</body>
+
+</html>
