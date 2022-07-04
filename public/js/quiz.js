@@ -31,6 +31,7 @@ NavbarHamburgerToggle.addEventListener('click', () => {
 
 });
 
+
 // "Next" button Event Listener
 // ================================================================= //
 next.addEventListener('click', () => {
@@ -130,6 +131,15 @@ function valueChosen(index, elementId) {
 // })
 
 
+let timeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.quiz-content-wrapper',
+    },
+});
+
+timeline
+    .from(".quiz-title", { y:  35, opacity: 0, duration: .5 }, "-1")
+    .from('.quiz-radios', { y: 15, opacity: 0, duration: .4 })
 
 // WHEN They Click Submit
 // THEN Display Load Screen
