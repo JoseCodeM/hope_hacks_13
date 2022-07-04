@@ -1,16 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
+    <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/quiz.css">
 </head>
+
 <body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header-img">
+                <img src="img/logo.png" alt="background">
+                <div class="nav-list-toggle" id="hamburger-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <nav class="nav-placeholder nav-display-none" id="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-list-item ">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/quiz">
+                            Quiz
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/map">
+                            Map
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="quiz-actions">
+            <div class="quiz-actions-wrapper">
+                <div class="progress-container">
+                    <div class="progress" id="progress">
+
+                    </div>
+
+                    <div class="circle active">1</div>
+                    <div class="circle">2</div>
+                    <div class="circle ">3</div>
+                    <div class="circle ">4</div>
+                </div>
+            </div>
+        </div>
+
+        <form class="quiz-content" action="/getResults" method="POST" id="quiz">
     
-    Quiz
-    <img src="img/cat.jpg" alt="cat">
+            <div class="quiz-content-wrapper">
+                <h2 class="quiz-title">
+                    This is a questions about your health. Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry?
+                </h2>
+                <div class="quiz-radios" required>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-1-A" id="question-1-A" value=1 name="question1"
+                            onclick="valueChosen(0, 'question-1-A')">
+                        <label for="question-1-A">Answer A</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-1-B" id="question-1-B" value=2 name="question1"
+                            onclick="valueChosen(0, 'question-1-B')">
+                        <label for="question-1-B">Answer B</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-1-C" id="question-1-C" value=3 name="question1"
+                            onclick="valueChosen(0, 'question-1-C')">
+                        <label for="question-1-C">Answer C</label>
+
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-1-D" id="question-1-D" value=4 name="question1"
+                            onclick="valueChosen(0, 'question-1-D')">
+                        <label for="question-1-D">Answer D</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-content-wrapper display-none">
+                <h2 class="quiz-title">
+                    This is a QUESTION 2 about your health. Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry?
+                </h2>
+                <div class="quiz-radios">
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-2-A" id="question-2-A" value=1 name="question2"
+                            onclick="valueChosen(1, 'question-2-A')">
+                        <label for="question-2-A">Answer A</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-2-B" id="question-2-B" value=2 name="question2"
+                            onclick="valueChosen(1, 'question-2-B')">
+                        <label for="question-2-B">Answer B</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-2-C" id="question-2-C" value=3 name="question2"
+                            onclick="valueChosen(1, 'question-2-C')">
+                        <label for="question-2-C">Answer C</label>
+
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-2-D" id="question-2-D" value=4 name="question2"
+                            onclick="valueChosen(1, 'question-2-D')">
+                        <label for="question-2-D">Answer D</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-content-wrapper display-none">
+                <h2 class="quiz-title">
+                    This is a QUESTION 3 about your health. Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry?
+                </h2>
+                <div class="quiz-radios">
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-3-A" id="question-3-A" value=1 name="question3"
+                            onclick="valueChosen(2, 'question-3-A')">
+                        <label for="question-3-A">Answer A</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-3-B" id="question-3-B" value=2 name="question3"
+                            onclick="valueChosen(2, 'question-3-B')">
+                        <label for="question-3-B">Answer B</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-3-C" id="question-3-C" value=3 name="question3"
+                            onclick="valueChosen(2, 'question-3-C')">
+                        <label for="question-3-C">Answer C</label>
+
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-3-D" id="question-3-D" value=4 name="question3"
+                            onclick="valueChosen(2, 'question-3-D')">
+                        <label for="question-3-D">Answer D</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-content-wrapper display-none">
+                <h2 class="quiz-title">
+                    This is a QUESTION 4 about your health. Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry?
+                </h2>
+                <div class="quiz-radios">
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-4-A" id="question-4-A" value=1 name="question4"
+                            onclick="valueChosen(3, 'question-4-A')">
+                        <label for="question-4-A">Answer A</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-4-B" id="question-4-B" value=2 name="question4"
+                            onclick="valueChosen(3, 'question-4-B')">
+                        <label for="question-4-B">Answer B</label>
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-4-C" id="question-4-C" value=3 name="question4"
+                            onclick="valueChosen(3, 'question-4-C')">
+                        <label for="question-4-C">Answer C</label>
+
+                    </div>
+                    <div class="quiz-radio-wrapper">
+                        <input type="radio" for="question-4-D" id="question-4-D" value=4 name="question4"
+                            onclick="valueChosen(3, 'question-4-D')">
+                        <label for="question-4-D">Answer D</label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn display-none" id="submit" type="submit" style="text-align: center; margin: 0 auto;">Submit</button>
+        </form>
+
+        <div class="quiz-buttons">
+            <button class="btn" id="prev" disabled>
+                Previous
+            </button>
+
+            <button class="btn" id="next">
+                Next
+            </button>
+
+        </div>
+    </main>
+
+    <!-- Results Page with CTA's -->
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-top">
+                <div class="header-img">
+                    <img src="img/logo.png" alt="background">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            Quiz
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            Map
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/quiz.js"> </script>
 </body>
+
 </html>
