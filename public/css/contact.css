@@ -1,3 +1,203 @@
-body {
-    background-color: #f7efc3;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
+
+body,
+html {
+    background-color: #ffffff;
+    height: 100%;
+    font-family: "Poppins";
+}
+
+.nav-list {
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+}
+
+
+a.active,
+a:hover {
+    background: rgba(146, 46, 163, 0.733);
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40 px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 925px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2b008066;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #9600e614;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+
+/*hero page */
+.hero-image {
+    background-image: url(/img/other-page-bg.webp);
+    padding: 100px;
+    text-align: center;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+   margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* align-items: center; */
+gap: 2rem;
+
+}
+aside{
+    background-color: #3a3b7b;
+    padding: 6rem 1rem;
+
+
+}
+.smLogo img{
+    width: 60px;
+    height: 60px;
+
+}
+.box h2 {
+  margin-bottom: 1rem;  
+color:#ffffff
+}
+.box p {
+    margin-bottom: 4rem;
+    color: #ffffff;
+} 
+
+/* Style inputs */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color:darkslateblue ;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    color:white ;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(57, 97, 172);
+}
+h2{
+    color: #ffffff;
+
+}
+P{
+    color:#ffffff
+}
+
+.nav-footer-list {
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.nav-footer-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-footer-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-footer-item:first-child {
+    margin-left: auto;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
