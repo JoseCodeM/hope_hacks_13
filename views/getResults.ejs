@@ -4,17 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>Results</title>
+    <!--  ================ FONT AWESOME ================= -->
     <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/quiz.css">
+    <!--  ================ GSAP ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+    <!--  ================ CSS FILE ================= -->
+    <link rel="stylesheet" href="css/getResults.css">
 </head>
 
 <body>
+    <div class="preloader">
+        <img src="img/logo.svg" alt="Loading Screen" width="200px">
+    </div>
+    <!-- NAVIGATION BAR -->
+    <!-- ============================================================ -->
     <header>
         <div class="header-wrapper">
             <div class="header-img">
-                <img src="img/logo.png" alt="background">
+                <img src="img/logo.svg" alt="background" id="logo">
                 <div class="nav-list-toggle" id="hamburger-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -23,19 +34,19 @@
             <nav class="nav-placeholder nav-display-none" id="nav">
                 <ul class="nav-list">
 
-                    <li class="nav-list-item ">
+                    <li class="nav-list-item">
                         <a href="/">
                             Home
                         </a>
                     </li>
                     <li class="nav-list-item">
                         <a href="/quiz">
-                            Quiz
+                            Care Assessment
                         </a>
                     </li>
                     <li class="nav-list-item">
                         <a href="/map">
-                            Map
+                            Treatment Options
                         </a>
                     </li>
                     <li class="nav-list-item">
@@ -50,16 +61,57 @@
     </header>
 
     <main>
-        <h1> <%= outputTitle %> </h1>
-        <p> <%= outputDesc %> </p>
+        <div class="main-wrapper">
+            <!-- RESULTS BANNER -->
+            <!-- ============================================================ -->
+            <div class="results-wrapper">
+                <h1 class="results-name">
+                    <%= outputTitle %>
+                </h1>
+                <p class="results-description">
+                    <%= outputDesc %>
+                </p>
+            </div>
+
+            <!-- CALL TO ACTIONS -->
+            <!-- ============================================================ -->
+            <div class="ctas">
+                <div class="cta" id="cta--first">
+                    <h2 class="cta__title">
+                        Treatment Options that are available. <i class="fa-solid fa-location-dot"></i>
+                    </h2>
+                    <p class="cta__text">
+                        Tranquil&#8482; has partnered with Charlotte based non-profit,
+                        JOSJA Foundation to bring you local resources.
+                    </p>
+                    <a class="cta__button" href="/map">
+                        View Treatments
+                    </a>
+                </div>
+                <div class="cta">
+                    <h2 class="cta__title">
+                        Need to speak with a professional? <i class="fa-solid fa-language"></i>
+                    </h2>
+                    <p class="cta__text">
+                        Please ask if You need help or have a question. Dont be afriad to contact us we are avalaible in
+                        various lanagugues. 
+                    </p>
+                    <a class="cta__button" href="/contact">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <!-- Results Page with CTA's -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
     <footer>
         <div class="footer-wrapper">
             <div class="footer-top">
                 <div class="header-img">
-                    <img src="img/logo.png" alt="background">
+                    <img src="img/logo.svg" alt="background">
                 </div>
             </div>
 
@@ -72,12 +124,12 @@
                     </li>
                     <li class="footer-list-item">
                         <a href="/quiz">
-                            Quiz
+                            Care Assessment
                         </a>
                     </li>
                     <li class="footer-list-item">
                         <a href="/map">
-                            Map
+                            Treatment Options
                         </a>
                     </li>
                     <li class="footer-list-item">
@@ -112,7 +164,7 @@
         </div>
     </footer>
 
-    <!-- <script src="js/quiz.js"> </script> -->
+    <script src="js/getResults.js"> </script>
 </body>
 
 </html>

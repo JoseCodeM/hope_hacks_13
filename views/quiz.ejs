@@ -5,37 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <!--  ================ FONT AWESOME ================= -->
     <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
 
+    <!--  ================ GSAP ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+    <!--  ================ CSS FILE ================= -->
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 
 <body>
+    <!-- NAVIGATION BAR -->
+    <!-- ============================================================ -->
     <header>
         <div class="header-wrapper">
             <div class="header-img">
-                <img src="img/logo.png" alt="background">
+                <img src="img/logo.svg" alt="background" id="logo">
                 <div class="nav-list-toggle" id="hamburger-toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
 
-            <nav class="nav-placeholder nav-display-none" id="nav">
+            <nav class="nav-section nav-display-none" id="nav">
                 <ul class="nav-list">
 
-                    <li class="nav-list-item ">
+                    <li class="nav-list-item">
                         <a href="/">
                             Home
                         </a>
                     </li>
                     <li class="nav-list-item">
                         <a href="/quiz">
-                            Quiz
+                            Care Assessment
                         </a>
                     </li>
                     <li class="nav-list-item">
                         <a href="/map">
-                            Map
+                            Treatment Options
                         </a>
                     </li>
                     <li class="nav-list-item">
@@ -66,7 +74,7 @@
         </div>
 
         <form class="quiz-content" action="/getResults" method="POST" id="quiz">
-    
+
             <div class="quiz-content-wrapper">
                 <h2 class="quiz-title">
                     This is a questions about your health. Lorem Ipsum is simply dummy text of the printing and
@@ -187,7 +195,8 @@
                 </div>
             </div>
 
-            <button class="btn display-none" id="submit" type="submit" style="text-align: center; margin: 0 auto;">Submit</button>
+            <button class="btn display-none" id="submit" type="submit"
+                style="text-align: center; margin: 0 auto;">Submit</button>
         </form>
 
         <div class="quiz-buttons">
@@ -202,12 +211,13 @@
         </div>
     </main>
 
-    <!-- Results Page with CTA's -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
     <footer>
         <div class="footer-wrapper">
             <div class="footer-top">
                 <div class="header-img">
-                    <img src="img/logo.png" alt="background">
+                    <img src="img/logo.svg" alt="background">
                 </div>
             </div>
 
@@ -220,12 +230,12 @@
                     </li>
                     <li class="footer-list-item">
                         <a href="/quiz">
-                            Quiz
+                            Care Assessment
                         </a>
                     </li>
                     <li class="footer-list-item">
                         <a href="/map">
-                            Map
+                            Treatment Options
                         </a>
                     </li>
                     <li class="footer-list-item">

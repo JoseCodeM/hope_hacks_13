@@ -19,10 +19,41 @@ a {
 }
 
 /* =============================================================== */
+/* Preloader */
+/* =============================================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #eceff6;
+  display: grid;
+  place-content: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.preloader--disappear {
+  animation: fadeout 1s forwards;
+
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: none;
+  }
+}
+
+/* =============================================================== */
 /* NAVBAR */
 /* =============================================================== */
 header {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .header-wrapper {
@@ -41,7 +72,7 @@ nav {
 }
 
 .header-img img {
-  width: 100px;
+  width: 90px;
   object-fit: cover;
 }
 
@@ -73,7 +104,7 @@ nav {
   display: none;
 }
 
-@media (max-width: 78em) {
+@media (max-width: 78em)  {
   .nav-list-toggle {
     display: inline-block;
     cursor: pointer;
@@ -202,209 +233,108 @@ footer {
 }
 
 /* =============================================================== */
-/* QUIZ */
+/* MAIN */
 /* =============================================================== */
-.quiz-actions {
-  width: 100%;
+main {
   display: grid;
-  align-items: center;
-  text-align: center;
+  place-content: center;
+  padding: 0 1rem;
 }
 
-.quiz-actions-wrapper {
-  margin: 0 auto;
+.results-wrapper {
+  max-width: 1230px;
+  padding: 8vh 5vw;
+  margin: 4rem 0;
+  background-color: #eceff6;
+  border-radius: 40px;
 }
 
-.progress-container {
+/* e56f8c */
+
+.results-name {
+  font-size: clamp(1.75rem, calc(-0.75rem + 6.67vw), 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.results-description {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.ctas {
+  max-width: 1230px;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  margin-bottom: 2rem;
-  max-width: 100%;
-  width: 350px;
+  flex-flow: row wrap;
 }
 
-.progress-container::before {
-  content: "";
-  background-color: var(--line-border-empty);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100%;
-  z-index: -1;
-  transition: 0.4s ease;
+.cta {
+  background-image: url("../img/major-life.png");
+  width: 48%;
+  flex: 0 0 48%;
+  padding: 8vh 5vw;
+  border-radius: 40px;
 }
 
-.progress {
-  background-color: var(--line-border-fill);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.4s ease;
+#cta--first {
+  background-image: url("../img/anxiety.png");
 }
 
-.circle {
-  background-color: #ffffff;
-  color: #3a3b7b;
-  border-radius: 50%;
-  border: solid var(--line-border-empty) 2px;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: 0.4s ease;
-}
-
-.circle.active {
-  border-color: var(--line-border-fill);
-}
-
-/* =============================================== */
-
-main {
-  padding: 4rem 0;
-}
-.quiz-content {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  text-align: center;
-}
-
-.quiz-content::before {
-  transition: 0.4s ease;
-}
-
-.quiz-content-wrapper {
-  border-radius: 20px;
-  margin: 3rem 0 4rem 0;
-}
-
-.quiz-title {
-  font-size: clamp(1rem, calc(0.25rem + 2.5vw), 1.5rem);
+.cta__title {
+  font-size: 1.9rem;
+  line-height: 1.2;
   font-weight: 600;
-  line-height: 1.3;
-  margin: 0 0.8rem 2rem 0.8rem;
+  margin-bottom: 2rem;
 }
 
-.quiz-radios {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem;
-  text-align: left;
-}
-
-.quiz-radio-wrapper {
-  font-size: 1.1rem;
+.cta__text {
+  font-size: 1rem;
   font-weight: 500;
-  border-radius: 7px;
-  border: #c9c9c9 2px solid;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
-.quiz-radio-wrapper:hover {
-  border: #3a3b7b 2px solid;
+.cta__button {
+  display: inline-block;
+  background-color: #e56f8c;
+  color: #ffffff;
+  padding: 1.2rem 1.8rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.cta__button:hover {
+  background-color: #f7f7f7;
+  color: #e56f8c;
   transition: 0.2s ease-in;
 }
 
-.quiz-radio-wrapper:focus-within {
-  outline: 1px solid #3a3b7b;
+@media (max-width: 950px) {
+  .ctas {
+    margin-bottom: 5rem;
+    flex-flow: column wrap;
+    gap: 3rem;
+  }
+
+  .cta {
+    width: 100%;
+    flex: 0 0 100%;
+  }
 }
 
-.quiz-radio-wrapper label {
-  width: 90%;
-  cursor: pointer;
+@media (max-width: 450px) {
+  .results-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 
-}
-
-.quiz-radio-wrapper input[type="radio"] + label {
-   padding: 1.7rem 2rem;
-}
-
-/* .quiz-radio-wrapper input[type="radio"]:checked + label {
-} */
-
-.quiz-radio-wrapper input {
-  margin: 0 1rem;
-  background-color: #3a3b7b;
-}
-
-.display-none {
-  display: none;
-}
-
-/* =============================================== */
-
-.quiz-buttons {
-  display: flex;
-  place-content: center;
-}
-
-.btn {
-  background-color: var(--line-border-fill);
-  color: #ffffff;
-  border: 0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 0.7rem 2rem;
-  margin: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  border: 2px solid #3a3b7b;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn:focus {
-  outline: 0;
-}
-
-#next {
-  background-color: #3a3b7b;
-}
-
-#submit {
-  border: 2px solid #60ca50;
-  background-color: #ffffff;
-  color: #60ca50;
-  width: 134px;
-}
-
-#submit:hover {
-  background-color: #60ca50;
-  color: #ffffff;
-
-  transition: 0.2s ease-in-out;
-}
-
-#prev {
-  border: 2px solid var(--line-border-empty);
-}
-
-#prev:hover {
-  background-color: var(--line-border-empty);
-  color: #1b1b1b;
-  transition: 0.2s ease-in-out;
-}
-
-.btn:disabled {
-  border: 2px solid var(--line-border-empty);
-  background-color: var(--line-border-empty);
-  color: #3a3b7b;
-  cursor: not-allowed;
+  .cta__title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
 }
