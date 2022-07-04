@@ -9,6 +9,7 @@ const path = require("path");
 const req = require("express/lib/request");
 // const uri = process.env.MONGODB_CONNECTION_STRING;
 const asyncHandler = require("express-async-handler");
+const { default: mongoose } = require("mongoose");
 const MongoClient = require("mongodb").MongoClient;
 
 // MongoClient.connect(
@@ -92,41 +93,10 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-// app.get("/getResults", (req, res) => {
-//   res.render(req.body);
-//     let output = []
-//     connection.collection('results').find().forEach(el => output.push(el)).then(() => {
-//         res.status(200).json(output)
-//     })
-// });
-
 app.get("/quiz", (req, res) => {
   res.render("quiz");
 });
 
-// getting information from the front end
-// app.get("/quiz", (req, res) => {
-//   req.render("quiz");
-// });
-
-// app.post(
-//   "/getResults",
-//   asyncHandler(async (req, res) => {
-//     let post = req.body;
-//     const hopehacks13 = Number(post.question1) + Number(post.question2) + Number(post.question3) + Number(post.question4);
-//      const health = await result.find(
-//       {
-//         name: "Clinical Depression",
-//       },
-//       { name: 1 }
-//     );
-
-//     console.log(health);
-//     res.json(health);
-//     res.status(200).json(health())
-//     console.log(hopehacks13);
-//   })
-// );
 
 MongoClient.connect(
     "mongodb+srv://CatDadJose:password1234@cluster0.vump9.mongodb.net/database",
@@ -137,26 +107,75 @@ MongoClient.connect(
     const quotesCollection = db.collection("results");
   
     app.post("/getResults", (req, res) => {
-      let score = req.body;
-      const hopehacks13 =
-        Number(score.question1) +
-        Number(score.question2) +
-        Number(score.question3) +
-        Number(score.question4);
+      let answerValues = req.body;
+      const score =
+        Number(answerValues.question1) +
+        Number(answerValues.question2) +
+        Number(answerValues.question3) +
+        Number(answerValues.question4);
   
-        console.log(hopehacks13)
+        console.log(score);
+        
+        if(score <= 4) {
+          quotesCollection
+          .findOne({name: 'Clinical Depression'})
+          .then((results) => {
+            // res.setHeader('Content-Type', 'text/html');
+            // res.status(200).json
+            // (`
+            // <h1> ${JSON.stringify(results.name)} </h1>
+            // <p> ${JSON.stringify(results.description)} </p> 
+            // `)
+            res.render('getResults', {
+              outputTitle: results.name,
+              outputDesc: results.description
+
+            })
+            
+          })
+          .catch((error) => console.error(error));
+        }
+
+        if(score > 4 && score <= 8 ) {
+          quotesCollection
+          .findOne({name: 'Anxiety Disorder'})
+          .then((results) => {
+            res.render('getResults', {
+              outputTitle: results.name,
+              outputDesc: results.description
+
+            })
+          })
+          .catch((error) => console.error(error));
+        }
+
+        if(score > 8 && score <= 12 ) {
+          quotesCollection
+          .findOne({name: 'Bipolar Disorder'})
+          .then((results) => {
+            res.render('getResults', {
+              outputTitle: results.name,
+              outputDesc: results.description
+
+            })
+          })
+          .catch((error) => console.error(error));
+        }
+
+        if(score > 12 && score <= 16 ) {
+          quotesCollection
+          .findOne({name: 'Obsessive Compulsive Disorder'})
+          .then((results) => {
+            res.render('getResults', {
+              outputTitle: results.name,
+              outputDesc: results.description
+
+            })
+          })
+          .catch((error) => console.error(error));
+        }
     });
-    
-    app.get("/getResults", (req, res) => {
-  
-      db.collection("results")
-        .find()
-        .toArray()
-        .then((results) => {
-          console.log(results);
-        })
-        .catch((error) => console.error(error));
-    });
+
   });
 
 // Example for other folders
