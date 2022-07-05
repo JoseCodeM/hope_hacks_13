@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 require("dotenv").config();
 const app = express();
 app.use(express.json());
-const port = 5000;
+const port = process.env.PORT || 5000;
 const path = require("path");
 const req = require("express/lib/request");
 // const uri = process.env.MONGODB_CONNECTION_STRING;
