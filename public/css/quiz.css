@@ -17,6 +17,37 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* =============================================================== */
+/* Preloader */
+/* =============================================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #eceff6;
+  display: grid;
+  place-content: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.preloader--disappear {
+  animation: fadeout 1s forwards;
+
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: none;
+  }
+}
+
 
 /* =============================================================== */
 /* NAVBAR */
