@@ -31,6 +31,20 @@ NavbarHamburgerToggle.addEventListener('click', () => {
 
 });
 
+// Preloader Functions
+// ================================================================= //
+const preloader = document.querySelector('.preloader');
+setTimeout(function () {
+    preloader.classList.add('preloader--disappear');
+
+}, 500);
+
+setTimeout(function () {
+    preloader.classList.add('display-none');
+
+}, 1000);
+
+
 
 // "Next" button Event Listener
 // ================================================================= //
@@ -138,7 +152,7 @@ let timeline = gsap.timeline({
 });
 
 timeline
-    .from(".quiz-title", { y:  35, opacity: 0, duration: .5 }, "-1")
+    .from(".quiz-title", { y: 35, opacity: 0, duration: .5 }, "-1")
     .from('.quiz-radios', { y: 15, opacity: 0, duration: .4 })
 
 // WHEN They Click Submit

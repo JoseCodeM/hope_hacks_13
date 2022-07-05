@@ -5,20 +5,18 @@ const NavbarHamburgerToggle = document.getElementById('hamburger-toggle');
 const NavbarMobile = window.matchMedia("(max-width: 800px)");
 const NavbarDisplayClass = Navbar.classList.contains('display-none');
 
-// let preloader = document.querySelector('.preloader');
+// Preloader Functions
+// ================================================================= //
+const preloader = document.querySelector('.preloader');
+setTimeout(function () {
+    preloader.classList.add('preloader--disappear');
 
-// window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    setTimeout( function() {
-        preloader.classList.add('preloader--disappear');
+}, 500);
 
-    }, 500 );
+setTimeout(function () {
+    preloader.classList.add('display-none');
 
-    setTimeout( function() {
-        preloader.classList.add('display-none');
-
-    }, 1000 );
-// });
+}, 1000);
 
 // Navbar Mobile Responsive Event Listener
 // ================================================================= //
@@ -33,5 +31,5 @@ let timeline = gsap.timeline({
 });
 
 timeline
-    .from(".results-description", { y:  40, opacity: 0, duration: .5 }, "-1")
-    .from('.cta', { x: 35, opacity: 0, duration: .5 })
+    .from(".results-description", { y: 40, opacity: 0, duration: 1 }, "-1")
+    .from('.cta', { x: 35, opacity: 0, duration: 1 })
