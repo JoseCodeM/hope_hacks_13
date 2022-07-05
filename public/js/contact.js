@@ -21,3 +21,4 @@ function openForm() {
   function closeForm() {
     document.querySelector('#myForm').style.display = "none";
   } 
+  
