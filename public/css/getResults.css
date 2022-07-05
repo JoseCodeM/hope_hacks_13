@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --line-border-fill: #7186ea;
+  --line-border-empty: #e0e0e0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,16 +13,40 @@
   font-family: "Poppins", sans-serif;
 }
 
-body,
-html {
-  background-color: #ffffff;
-  height: 100%;
-  font-family: "Poppins";
-}
-
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* =============================================================== */
+/* Preloader */
+/* =============================================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #eceff6;
+  display: grid;
+  place-content: center;
+}
+
+.display-none {
+  display: none;
+}
+
+.preloader--disappear {
+  animation: fadeout 1s forwards;
+
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: none;
+  }
 }
 
 /* =============================================================== */
@@ -73,7 +104,7 @@ nav {
   display: none;
 }
 
-@media (max-width: 78em) {
+@media (max-width: 78em)  {
   .nav-list-toggle {
     display: inline-block;
     cursor: pointer;
@@ -130,7 +161,7 @@ nav {
 /* =============================================================== */
 footer {
   /* position: fixed;
-    bottom: 0; */
+  bottom: 0; */
   padding: 0 1rem 4rem 1rem;
   width: 100%;
 }
@@ -201,87 +232,109 @@ footer {
   }
 }
 
-/*hero page */
-.hero-image {
-  background-image: url(/img/other-page-bg.webp);
-  padding: 100px;
-  text-align: center;
-  background-size: cover;
+/* =============================================================== */
+/* MAIN */
+/* =============================================================== */
+main {
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
+.results-wrapper {
+  max-width: 1230px;
+  padding: 8vh 5vw;
+  margin: 4rem 0;
+  background-color: #eceff6;
+  border-radius: 40px;
+}
+
+/* e56f8c */
+
+.results-name {
+  font-size: clamp(1.75rem, calc(-0.75rem + 6.67vw), 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
+}
+
+.results-description {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.ctas {
+  max-width: 1230px;
+  margin-bottom: 5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  /* align-items: center; */
-  gap: 2rem;
-}
-aside {
-  background-color: #3a3b7b;
-  padding: 6rem 1rem;
-}
-.smLogo img {
-  width: 60px;
-  height: 60px;
-}
-.box h2 {
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-.box p {
-  margin-bottom: 4rem;
-  color: #ffffff;
+  justify-content: space-between;
+  flex-flow: row wrap;
 }
 
-/* Style inputs */
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+.cta {
+  background-image: url("../img/major-life.png");
+  width: 48%;
+  flex: 0 0 48%;
+  padding: 8vh 5vw;
+  border-radius: 40px;
 }
 
-input[type="submit"] {
-  background-color: darkslateblue;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-  color: white;
+#cta--first {
+  background-image: url("../img/anxiety.png");
 }
 
-label {
-  padding: 12px 12px 12px 0;
+.cta__title {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.cta__text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cta__button {
   display: inline-block;
+  background-color: #e56f8c;
+  color: #ffffff;
+  padding: 1.2rem 1.8rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
-input[type="submit"]:hover {
-  background-color: rgb(57, 97, 172);
-}
-h2 {
-  color: #ffffff;
-}
-P {
-  color: #ffffff;
+.cta__button:hover {
+  background-color: #f7f7f7;
+  color: #e56f8c;
+  transition: 0.2s ease-in;
 }
 
-@media (max-width: 1200px) {
-  .container {
-    flex-direction: column;
+@media (max-width: 950px) {
+  .ctas {
+    margin-bottom: 5rem;
+    flex-flow: column wrap;
+    gap: 3rem;
   }
 
-  aside {
+  .cta {
     width: 100%;
-  }
-
-  .column {
-    width: 60%;
-    margin: 0 0 0 2rem;
+    flex: 0 0 100%;
   }
 }
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media (max-width: 450px) {
+  .results-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .cta__title {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}

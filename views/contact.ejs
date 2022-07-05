@@ -7,51 +7,66 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!--  ================ FONT AWESOME ================= -->
+    <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     </head>
 
     <body>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
+        <!-- NAVIGATION BAR -->
+        <!-- ============================================================ -->
+        <header>
+            <div class="header-wrapper">
+                <div class="header-img">
+                    <img src="img/logo.svg" alt="background" id="logo">
+                    <div class="nav-list-toggle" id="hamburger-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
 
-            </label>
-
-            <header>
-                <nav>
+                <nav class="nav-section nav-display-none" id="nav">
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <img src="/img/logo.png" alt="logo" width="400px" height="72px">
+
+                        <li class="nav-list-item">
+                            <a href="/">
+                                Home
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="">Home</a>
+                        <li class="nav-list-item">
+                            <a href="/quiz">
+                                Care Assessment
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/quiz">Quiz</a>
+                        <li class="nav-list-item">
+                            <a href="/map">
+                                Treatment Options
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/map">Maps</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact">Contact Us</a>
+                        <li class="nav-list-item">
+                            <a href="/contact">
+                                Contact
+                            </a>
                         </li>
                     </ul>
                 </nav>
-            </header>
 
-        </nav>
+            </div>
+        </header>
+        <!-- CONTACT SECTION -->
+        <!-- ============================================================ -->
         <section class="hero-image">
             <h1>Contact Us</h1>
         </section>
+
+        <!-- CONTACT FORM -->
+        <!-- ============================================================ -->
         <section class="container">
 
             <aside>
@@ -59,9 +74,11 @@
                     <h2> Reach out to us </h2>
                     <p> Please ask if You need help or have a question. Dont be afriad to contact us we are avalaible in
                         various lanagugues.
-                        Your Mental Health is important for us and we are here for you! Reaching out and being open about your struggles increases your chance of getting the proper direction and help you require. 
-                        Every person who seeks care also contributes to a decrease in the stigma around mental health.</p>
-                      
+                        Your Mental Health is important for us and we are here for you! Reaching out and being open
+                        about your struggles increases your chance of getting the proper direction and help you require.
+                        Every person who seeks care also contributes to a decrease in the stigma around mental health.
+                    </p>
+
                     </p>
                 </div>
                 <h2>Social Plaforms </h2>
@@ -83,13 +100,13 @@
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name..">
                     <label for="lname">Last Name</label>
-               <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-               <label for="Phone#">Phone Number</label>
-                        <input type="text" id="Phone#" name="Phone#" placeholder="(704)-098-1166..">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="a076d05399@gmail.com..">
-                        <label for="country">Languages<label>
-                        <select id="Languages" name="lanagugues">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="Phone#">Phone Number</label>
+                    <input type="text" id="Phone#" name="Phone#" placeholder="(704)-098-1166..">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="a076d05399@gmail.com..">
+                    <label for="country">Languages<label>
+                            <select id="Languages" name="lanagugues">
                                 <option value="usa">English</option>
                                 <option value="Spanish">Spanish/Español, </option>
                                 <option value=" French">French/ Le français </option>
@@ -111,29 +128,65 @@
             </section>
 
         </section>
-        <footer>
-            <nav-footer>
-                <ul class="nav-footer-list">
-                    <li class="nav-footer-item">
-                        <img src="/img/logo.png" alt="logo" width="100px" height="20px">
-                    </li>
-                    <li class="nav-footer-item">
-                        <a href="">Home</a>
-                    </li>
-                    <li class="nav-footer-item">
-                        <a href="/quiz">Quiz</a>
-                    </li>
-                    <li class="nav-footer-item">
-                        <a href="/map">Maps</a>
-                    </li>
-                    <li class="nav-footer-item">
-                        <a href="contact">Contact Us</a>
-                    </li>
-                </ul>
-            </nav-footer>
-        </header>
-        </footer>
 
+        <!-- FOOTER -->
+        <!-- ============================================================ -->
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-top">
+                    <div class="header-img">
+                        <img src="img/logo.svg" alt="background">
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/quiz">
+                                Care Assessment
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/map">
+                                Treatment Options
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer-list">
+                        <li class="footer-list-item">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/quiz">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/map">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="/contact">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <script src="js/contact.js"> </script>
     </body>
 
