@@ -184,7 +184,7 @@ section>p{
     position: relative;
     font-family: "Poppin", sans-serif ;
     font-size: 1em;
-    font-weight: 100 ;
+ 
     top: auto;
     height: 50px;
     margin: 0 auto;
@@ -214,7 +214,7 @@ article{
 article>section.resource-section{
   
   border-radius: 40px ;
- 
+  font-size: 15px;
   height: 300px;
   width: 20%; 
   top:50px;
@@ -251,8 +251,7 @@ article>section.resource-section{
  background-color: #E56F8C;
  border-radius: 30px;
  color: white;
- height: 35px;
- width: 45%;
+ 
  margin: 5px auto;
  padding: 10px;
 }
