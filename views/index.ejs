@@ -1,80 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/index.css">
+    <!--  ================ FONT AWESOME ================= -->
+    <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    
+
     <header>
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item">
-                </li>
-                <li class="nav-item">
-                    <a href="">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/quiz">Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/map">Maps</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="header-wrapper">
+            <div class="header-img">
+                <img src="img/logo.svg" alt="background" id="logo">
+                <div class="nav-list-toggle" id="hamburger-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <nav class="nav-section nav-display-none" id="nav">
+                <ul class="nav-list">
+
+                    <li class="nav-list-item">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/quiz">
+                            Care Assessment
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/map">
+                            Treatment Options
+                        </a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     <!-- Hero Img with text inside -->
-    <div class="hero-image">
+    <section class="hero-image">
         <div class="hero-text">
-          <h1>Experience one of the best places that caters for your mental health</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias 
-              accusamus tempore dolor sit amet consectetur adipisicing elit. Molestias 
-              accusamus tempore</p>
-              <button>Get Started</button>
+            <h1>Affordable, private therapy</h1>
+            <p id="h1text">Tranquil is an e-counseling platform that makes mental health services accessible and
+                affordable to anyone. We are committed to providing excellence and prioritize professionalism,
+                compassion, and passion in our work.
+            </p>
+            <a class="button" href="/contact">Get Started</a>
         </div>
-      </div>
+    </section>
 
-    
-    <!-- <img src="img/home-hero-bg.webp" alt="background" width="100%" height="100%"> -->
-
-    
-    <div class="About"> 
-          <div>
+    <section class="about">
+        <div class="about-container">
             <img src="img/home-person.webp" width="327.5" height="394.78">
-            <h3 id="about">View our map to find the nearest therapist!</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima ex nulla ullam
-                minus tempora, ipsam esse, ad nostrum aperiam quos cum error. Rem minus numquam
-                nemo autem aperiam, corporis temporibus.</p>
-            <button>View Maps</button>
-          </div>
+            <div class="about-text">
+                <h3>So how does it work?</h3>
+                <p>Fill out a questionnaire to help us assess your needs and get matched to one of 25,000
+                    licensed therapists.
+                </p>
+                <a class="button" href="/quiz">Take our assessment</a>
+            </div>
         </div>
-        
+    </section>
 
-    <div id="cool">
-        <div id="cool2">
 
-        
-        <h3 id="information">Here are some of our features, and more information!</h3>
-            <p id="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button id="btn2">TO BE DETERMINED</button>
-    </div>
-    
+    <section class="about">
+        <div class="about-container about-container--reverse">
+            <img id="about--custom-img" src="/img/home-phone.webp">
+            <div class="about-text">
+                <h3>Professional, licensed, and vetted therapist who you can contact and trust 24/7
+                </h3>
+                <p id="info">
+                    Tap into the world's largest network of licensed, accredited, and experienced therapists who can
+                    help you with a range of issues including depression, anxiety, relationships, trauma, grief, and
+                    more
+                </p>
+                <a class="button" href="/map">Treatment Options</a>
+            </div>
         </div>
 
-    <div id="calltoaction">
-        <P id="CTA">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse.</P>
-    </div>
-    </div>
-    <div id="button3">
-    <button id="btn3">TO BE DETERMINED</button>
+
+
+    </section>
+
+    <section class="cta">
+        <div class="cta-container">
+            <h1>
+                Get matched to the best therapist for you.
+            </h1>
+            <p>
+                Answer a few questions to find a therapist who fits your needs
+                and preferences. Tap into the largest network of licensed, professional, board-certified providers.
+            </p>
+            <a class="button button--light" href="/quiz">
+                Take our assessment
+            </a>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-top">
+                <div class="header-img">
+                    <img src="img/logo.svg" alt="background">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            Care Assessment
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            Treatment Options
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/quiz">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/map">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="/contact">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/index.js"> </script>
-    </div>
-    
+
 </body>
+
 </html>
