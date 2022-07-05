@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
     <script src="https://kit.fontawesome.com/671c0ca6ff.js" crossorigin="anonymous"></script>
-
+    <link rel="icon" type="image/svg" href="img/logo.svg">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap" rel="stylesheet">
     <!-- <link href="locatorplus.css" rel="stylesheet">
@@ -59,43 +59,45 @@
     
 </head>
 <body>
-  <header>
-    <div class="header-wrapper">
-        <div class="header-img">
-            <img src="img/logo.svg" alt="logo" style="width:20%;">
-            <div class="nav-list-toggle" id="hamburger-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+ <!-- NAVIGATION BAR -->
+    <!-- ============================================================ -->
+    <header>
+      <div class="header-wrapper">
+          <div class="header-img">
+              <img src="img/logo.svg" alt="background" id="logo">
+              <div class="nav-list-toggle" id="hamburger-toggle">
+                  <i class="fa-solid fa-bars"></i>
+              </div>
+          </div>
 
-        <nav class="nav-placeholder nav-display-none" id="nav">
-            <ul class="nav-list">
+          <nav class="nav-section nav-display-none" id="nav">
+              <ul class="nav-list">
 
-                <li class="nav-list-item ">
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-list-item">
-                    <a href="/quiz">
-                        Care Assessment
-                    </a>
-                </li>
-                <li class="nav-list-item">
-                    <a href="/map">
-                        Treatment Options
-                    </a>
-                </li>
-                <li class="nav-list-item">
-                    <a href="/contact">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                  <li class="nav-list-item">
+                      <a href="/">
+                          Home
+                      </a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="/quiz">
+                          Care Assessment
+                      </a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="/map">
+                          Treatment Options
+                      </a>
+                  </li>
+                  <li class="nav-list-item">
+                      <a href="/contact">
+                          Contact
+                      </a>
+                  </li>
+              </ul>
+          </nav>
 
-    </div>
-</header>
+      </div>
+  </header>
     <main class="map">
         <h1>Treatment Options</h1>
         <p>tranquil offers treatment options via <br> Virtual and Physical Consultations for select regions.</p>
@@ -114,22 +116,22 @@
       <section class="resource-section mid1">
         <h3>Anxiety & Depression</h3>
         <p>Not feeling like yourself? It could be anxiety or depression.</p>
-        <a href="/views/contact.ejs">Start an Online Consultation</a>
+        <a href="/contact">Start an Online Consultation</a>
       </section>
       <section class="resource-section mid2">
         <h3>Sleep Troubles</h3>
         <p>Your mental health affects more than you think</p>
-        <a href="/views/contact.ejs">Start an Online Consultation</a>
+        <a href="/contact">Start an Online Consultation</a>
       </section>
       <section class="resource-section mid3">
         <h3>Job Stress & Burnout</h3>
         <p>Stress has been high lately. Treatment can help.</p>
-        <a href="/views/contact.ejs">Start an Online Consultation</a>
+        <a href="/contact">Start an Online Consultation</a>
       </section>
       <section class="resource-section mid4">
         <h3>Major Life Trouble</h3>
         <p>Whatever it may be, you don't have to go through it alone.</p>
-        <a href="/views/contact.ejs">Start an Online Consultation</a>
+        <a href="/contact">Start an Online Consultation</a>
       </section>
      </article>
      <section class="map-header">
