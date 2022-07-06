@@ -3,6 +3,39 @@
 ![logo-tranqil.png](https://i.postimg.cc/K853QpwP/logo-tranqil.png)
 <!-- [[/public/img/logo.svg|width=100px]] -->
 
+# Engineers: # 
+* ##  Josh Sease ##
+* ## Oscar Hernandez-Viquez ##
+* ## Ashley Lorenzo ##
+* ## Jose Martinez ##
+            
+---
+
+__Tranquil is an e-counseling platform that makes mental health services accessible and affordable to anyone. Fill out our questionaire and connect with local licensed therapist.__
+
+---
+
+HOW TO RUN LOCALLY: 
+
+After downloading files run 
+
+```console
+npm i
+```
+to install all packages in JSON
+
+---
+# Technologies: #
+* HTML
+* CSS
+* JAVASCRIPT
+* NODE.JS
+* MONGODB
+* EJS
+* EXPRESS
+* BODY-PARCER
+
+---
 
 MIT License
 Copyright (c) 2022 Group 13 - Tranquil
@@ -24,3 +57,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
