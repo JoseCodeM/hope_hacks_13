@@ -12,61 +12,6 @@ const asyncHandler = require("express-async-handler");
 const { default: mongoose } = require("mongoose");
 const MongoClient = require("mongodb").MongoClient;
 
-// MongoClient.connect(
-//   "mongodb+srv://CatDadJose:password1234@cluster0.vump9.mongodb.net/database",
-//   { useUnifiedTopology: true }
-// ).then((client) => {
-//   console.log("connected to DB");
-//   const db = client.db("hopeHacks");
-//   const quotesCollection = db.collection("results");
-
-//   app.post("/getResults", (req, res) => {
-//     let score = req.body;
-//     const hopehacks13 =
-//       Number(score.question1) +
-//       Number(score.question2) +
-//       Number(score.question3) +
-//       Number(score.question4);
-
-//       console.log(hopehacks13)
-//   });
-  
-//   app.get("/getResults", (req, res) => {
-
-//     db.collection("results")
-//       .find()
-//       .toArray()
-//       .then((results) => {
-//         console.log(results);
-//       })
-//       .catch((error) => console.error(error));
-//   });
-// });
-
-// const healthSchema = mongoose.Schema({
-//   name: {
-//     type: String,
-//     required: true,
-//   },
-//   description: {
-//     type: String,
-//     required: true,
-//   },
-// });
-// //connects launchesSchema with the "launches" collection
-// const result = mongoose.model("Result", healthSchema);
-
-// //Connecting MongoDB to server.
-// mongoose.connect(uri, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// const connection = mongoose.connection;
-// connection.once("open", () => {
-//   console.log("MongoDB connection established");
-// });
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Static Files
@@ -107,6 +52,12 @@ MongoClient.connect(
     const quotesCollection = db.collection("results");
   
     app.post("/getResults", (req, res) => {
+
+      db.collection('results').find().toArray()
+        .then(result => {
+          console.log(result)
+        })
+
       let answerValues = req.body;
       const score =
         Number(answerValues.question1) +
@@ -120,12 +71,6 @@ MongoClient.connect(
           quotesCollection
           .findOne({name: 'Clinical Depression'})
           .then((results) => {
-            // res.setHeader('Content-Type', 'text/html');
-            // res.status(200).json
-            // (`
-            // <h1> ${JSON.stringify(results.name)} </h1>
-            // <p> ${JSON.stringify(results.description)} </p> 
-            // `)
             res.render('getResults', {
               outputTitle: results.name,
               outputDesc: results.description
